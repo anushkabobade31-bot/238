@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <conio.h>
+void main() {
+    int ch, i;
+    clrscr();
+    printf("1.Idle 2.Active 3.Maintenance\nEnter mode: ");
+    scanf("%d", &ch);
+    switch(ch) {
+        case 1:
+            for(i=0;i<3;i++)
+                printf("Robot waiting...\n");
+            break;
+        case 2:
+            for(i=0;i<3;i++)
+                printf("Performing task %d...\n", i+1);
+            break;
+        case 3:
+            printf("Maintenance cycle running.\n");
+            break;
+        default: printf("Invalid!");
+    }
+    getch();
+}
